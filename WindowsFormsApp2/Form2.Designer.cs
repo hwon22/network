@@ -40,7 +40,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("문체부 제목 돋음체", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(60, 52);
+            this.label1.Location = new System.Drawing.Point(60, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 27);
             this.label1.TabIndex = 0;

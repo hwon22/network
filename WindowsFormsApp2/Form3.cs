@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
-        public Form2()
+        public Form3()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
 
         }
@@ -31,9 +26,9 @@ namespace WindowsFormsApp2
         {
             this.Visible = false;             // 추가
 
-            Form3 showForm3 = new Form3();
+            Form4 showForm4 = new Form4();
 
-            showForm3.ShowDialog();
+            showForm4.ShowDialog();
         }
     }
 }
