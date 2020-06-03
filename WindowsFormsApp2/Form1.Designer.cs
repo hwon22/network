@@ -29,33 +29,56 @@
         private void InitializeComponent()
         {
             this.myButton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // myButton
             // 
-            this.myButton.Location = new System.Drawing.Point(355, 350);
+            this.myButton.BackColor = System.Drawing.Color.SkyBlue;
+            this.myButton.Font = new System.Drawing.Font("문체부 제목 돋음체", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.myButton.ForeColor = System.Drawing.Color.White;
+            this.myButton.Location = new System.Drawing.Point(291, 283);
             this.myButton.Name = "myButton";
-            this.myButton.Size = new System.Drawing.Size(75, 23);
+            this.myButton.Size = new System.Drawing.Size(242, 99);
             this.myButton.TabIndex = 0;
-            this.myButton.Text = "button1";
-            this.myButton.UseVisualStyleBackColor = true;
+            this.myButton.Text = "클릭하여 실행";
+            this.myButton.UseVisualStyleBackColor = false;
             this.myButton.Click += new System.EventHandler(this.myButton_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("문체부 제목 돋음체", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox1.Location = new System.Drawing.Point(136, 90);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(562, 166);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "다중치환\r\n암호화 복호화\r\n프로그램";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.myButton);
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button myButton;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

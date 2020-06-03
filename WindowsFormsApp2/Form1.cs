@@ -15,12 +15,22 @@ namespace WindowsFormsApp2
         public Form1()
         {
             InitializeComponent();
-            myButton.Text = "hi";
+            //myButton.Text = "hi";
         }
 
         private void myButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("이곳의 문자열을 출력합니다");
+            //MessageBox.Show("이곳의 문자열을 출력합니다");
+            this.Visible = false;             // 추가
+
+            Form2 showForm2 = new Form2();
+
+            showForm2.ShowDialog();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
