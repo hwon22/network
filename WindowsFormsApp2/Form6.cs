@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class Form5 : Form
+    public partial class Form6 : Form
     {
-        public Form5()
+        public Form6()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;             // 추가
-
-            Form6 showForm6 = new Form6();
-
-            showForm6.ShowDialog();
         }
     }
 }

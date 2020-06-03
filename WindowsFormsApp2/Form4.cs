@@ -25,5 +25,10 @@ namespace WindowsFormsApp2
 
             showForm5.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //정보메시지 띄우기
+        }
     }
 }
