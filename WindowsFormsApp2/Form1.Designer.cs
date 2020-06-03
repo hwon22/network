@@ -37,9 +37,9 @@
             this.myButton.BackColor = System.Drawing.Color.SkyBlue;
             this.myButton.Font = new System.Drawing.Font("문체부 제목 돋음체", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.myButton.ForeColor = System.Drawing.Color.White;
-            this.myButton.Location = new System.Drawing.Point(291, 283);
+            this.myButton.Location = new System.Drawing.Point(291, 303);
             this.myButton.Name = "myButton";
-            this.myButton.Size = new System.Drawing.Size(242, 99);
+            this.myButton.Size = new System.Drawing.Size(240, 70);
             this.myButton.TabIndex = 0;
             this.myButton.Text = "클릭하여 실행";
             this.myButton.UseVisualStyleBackColor = false;
@@ -70,6 +70,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
