@@ -10,20 +10,20 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class Form4 : Form
+    public partial class Form5 : Form
     {
-        public Form4()
+        public Form5()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;             // 추가
 
-            Form5 showForm5 = new Form5();
+            Form4 showForm4 = new Form4();
 
-            showForm5.ShowDialog();
+            showForm4.ShowDialog();
         }
     }
 }
