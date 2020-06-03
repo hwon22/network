@@ -28,7 +28,10 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //정보메시지 띄우기
+            MessageBox.Show("화면의 암호문을 옮겨주세요.\n" +
+                "확인을 누르시면 일시정지가 풀립니다.", "일시정지",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Information);
         }
     }
 }

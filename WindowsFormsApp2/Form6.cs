@@ -16,5 +16,25 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //재시작버튼 클릭시
+            this.Visible = false;             // 추가
+
+            Form1 showForm1 = new Form1();
+
+            showForm1.ShowDialog();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //프로그램 종료버튼 클릭시
+            MessageBox.Show("프로그램을 종료합니다.", "종료",
+            MessageBoxButtons.OKCancel,
+            MessageBoxIcon.Information);
+            this.Visible = false;             // 추가
+        }
     }
 }
