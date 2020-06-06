@@ -19,6 +19,7 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             this.Visible = false;             // 추가
 
             Form5 showForm5 = new Form5();
