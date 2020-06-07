@@ -12,6 +12,8 @@ namespace WindowsFormsApp2
 {
     public partial class Form2 : Form
     {
+        
+
         public Form2()
         {
             InitializeComponent();
@@ -47,9 +49,14 @@ namespace WindowsFormsApp2
 
                     Control c = new Control();
                     string key=c.keyControl(keyis);
-                    
+                    string plain = c.plainControl(plainis);
+
+                    MessageBox.Show("변환된 암호문은 "+key+"\r\n변환된 평문은 "+plain+" 입니다.", "변환완료",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
                     this.Hide();    //form 전환
-                    Form3 setform3 = new Form3(key,plainis);  
+                    Form3 setform3 = new Form3(key,plain);  
                     setform3.Owner = this;
                     setform3.ShowDialog();
                     this.Close();
@@ -64,12 +71,13 @@ namespace WindowsFormsApp2
 
       
     }
+
     class Control
     {
         public string keyControl(string a)
         {
             string[] s = new string[] { " " };
-            string[] keyResult = a.Split(s, StringSplitOptions.RemoveEmptyEntries); //key문 소문자화, 중복제거 및 띄어쓰기 없애는 메소드로 이동
+            string[] keyResult = a.Split(s, StringSplitOptions.RemoveEmptyEntries);
             string keysResult = String.Concat(keyResult);
 
             char[] arr = keysResult.ToCharArray(0, keysResult.Length);
@@ -91,6 +99,33 @@ namespace WindowsFormsApp2
 
             return key;
 
+        }
+        public string plainControl(string b)
+        {
+            string[] s = new string[] { " " };
+            string[] plainResult = b.Split(s, StringSplitOptions.RemoveEmptyEntries);
+            string plainsResult = String.Concat(plainResult);
+
+            char[] plaining = plainsResult.ToCharArray(0, plainsResult.Length);
+            List<char> list2 = new List<char>();
+            for (int k = 0; k < plaining.Length; k += 2)
+            {
+                list2.Add(plaining[k]);
+                if (k + 1 < plaining.Length)
+                {
+                    if (plaining[k] == plaining[k + 1])
+                    {
+                        list2.Add('x');
+                    }
+                    list2.Add(plaining[k + 1]);
+                }
+            } 
+            if(list2.Count%2!=0)
+                  { list2.Add('x'); }
+
+            string plainPan = String.Concat(list2);
+
+            return plainPan;
         }
 
     }

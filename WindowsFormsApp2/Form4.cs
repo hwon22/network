@@ -14,6 +14,11 @@ namespace WindowsFormsApp2
     {
         public Form4()
         {
+            
+        }
+
+        public Form4(string ParentsText)
+        {
             InitializeComponent();
         }
 
