@@ -51,12 +51,14 @@ namespace WindowsFormsApp2
                     string key=c.keyControl(keyis);
                     string plain = c.plainControl(plainis);
 
+                    string keypan=c.madePan(key);
+                    
                     MessageBox.Show("변환된 암호문은 "+key+"\r\n변환된 평문은 "+plain+" 입니다.", "변환완료",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
                     this.Hide();    //form 전환
-                    Form3 setform3 = new Form3(key,plain);  
+                    Form3 setform3 = new Form3(key,plain,keypan);  
                     setform3.Owner = this;
                     setform3.ShowDialog();
                     this.Close();
@@ -100,14 +102,18 @@ namespace WindowsFormsApp2
             return key;
 
         }
+
         public string plainControl(string b)
         {
+            int x, y;
             string[] s = new string[] { " " };
             string[] plainResult = b.Split(s, StringSplitOptions.RemoveEmptyEntries);
             string plainsResult = String.Concat(plainResult);
 
             char[] plaining = plainsResult.ToCharArray(0, plainsResult.Length);
             List<char> list2 = new List<char>();
+
+
             for (int k = 0; k < plaining.Length; k += 2)
             {
                 list2.Add(plaining[k]);
@@ -123,9 +129,42 @@ namespace WindowsFormsApp2
             if(list2.Count%2!=0)
                   { list2.Add('x'); }
 
-            string plainPan = String.Concat(list2);
+            string plain = String.Concat(list2);
 
-            return plainPan;
+            return plain;
+        }
+
+        public string madePan(string originkey)
+        {
+            string GetText = originkey;
+
+            //key판 만들기
+            char[] arr = GetText.ToCharArray(0, GetText.Length);
+            string alp = "abcdefghijklmnopqrstuvwxy";
+            char[] alpha = alp.ToCharArray();
+            int i = 0, j = 0;
+
+            List<char> list = new List<char>();
+         
+            for (i = 0; i < GetText.Length; i++)
+            {
+                 list.Add(arr[i]);
+            }
+
+            for (i = GetText.Length; i <= 24 + j; i++)
+            {
+
+                if (list.Contains(alpha[i - GetText.Length]))
+                {
+                    j++;
+                }
+                else
+                {   
+                    list.Add(alpha[i - GetText.Length]);
+                }
+            }
+            string keyPan = String.Concat(list);
+            return keyPan;
         }
 
     }

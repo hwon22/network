@@ -12,23 +12,25 @@ namespace WindowsFormsApp2
 {
     public partial class Form4 : Form
     {
+        string GetText;
+
+
         public Form4()
         {
-            
+
         }
 
-        public Form4(string ParentsText)
+        public Form4(string ResultKey)
         {
             InitializeComponent();
+            textBox1.Text = ResultKey;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
-            this.Visible = false;             // 추가
-
+            this.Visible = false;
             Form5 showForm5 = new Form5();
-
             showForm5.ShowDialog();
         }
 
@@ -41,3 +43,4 @@ namespace WindowsFormsApp2
         }
     }
 }
+ 
